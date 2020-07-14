@@ -73,8 +73,22 @@ dogYears(27);
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
+  const game = choice => {
+      let computer = Math.round(Math.random() * 2);
+      let outcome;
+      if (choice === "paper" && computer === 0 || choice === "rock" && computer === 1 || choice === "scizzors" && computer === 2) {
+          outcome = "Draw";
+          return outcome;
+      } else if (choice === "paper" && computer === 1 || choice === "rock" && computer === 2 || choice === "scizzors" && computer === 0) {
+          outcome = "Victory";
+          return outcome;
+      } else if (choice === "paper" && computer === 2 || choice === "rock" && computer === 0 || choice === "scizzors" && computer === 1) {
+          outcome= "Defeat";
+          return outcome;
+      }
+  }
   
-  
+  console.log(game("rock"));
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
