@@ -63,6 +63,28 @@ dogYears(27);
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
 
+const dogFeeder = (age, weight) => {
+    //Adult Dogs at least 1 year
+    if(age >= 1 && weight <= 5) {
+        console.log("5% of their body weight");
+    } else if (age >= 1 && weight <= 10 && weight >= 6) {
+        console.log("4% of their body weight");
+    } else if (age >= 1 && weight <= 15 && weight >= 11){
+        console.log("3% of their body weight");
+    } //Puppies less than 1 year
+    else if (age <= 0.4 && age > 0.2 && weight) {
+        console.log("10% of their body weight")
+    } else if (age <= 0.7 && age > 0.4 && weight) {
+        console.log("5% of their body weight")
+    } else if (age < 1 && age > 0.7 && weight) {
+        console.log("10% of their body weight")
+    }
+    else {
+        console.log("2% of their body weight");
+    }
+}
+
+dogFeeder(0.3, 15)
 
 
 
