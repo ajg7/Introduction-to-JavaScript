@@ -108,10 +108,23 @@ console.log(otherMetricConverter(4))
 
 /************************************************************** Task 6 **************************************************************/
 // 99 bottles of soda on the wall
-// create a function called annoyingSong
-// the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
+// create a function called annoyingSongo
+// the function should take a starting number as an argument and count down - at each iteration it should lg (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
 
+const annoyingSong = num => {
+    while (num >= 0) {
+        let newNum = num - 1;
+        if(num !== 0){
+            console.log(num + " bottles of soda on the wall, "+ num + " bottles of soda, take one down pass it around " + newNum + " bottles of soda on the wall")
+        } else {
+            console.log("ALL THE POP IS GONE!")
+        }
+        num--;
+    }
+}
+
+console.log(annoyingSong(99));
 
 
 
