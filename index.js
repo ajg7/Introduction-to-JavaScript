@@ -1,25 +1,36 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
+const votingAge = 19;
 
-
+if (votingAge > 18) {
+    console.log("You are old enough to vote");
+}
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
+let example = 28;
 
+if(example === 28) {
+    example = 30;
+    console.log(example);
+}
 
 
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
-
-
+let str = "1999";
+const num = parseInt("1999");
 
 
 //Task d: Write a function to multiply a*b 
 
 
+const multiply = (a, b) => {
+    return a * b;
+}
 
 
 
@@ -28,7 +39,9 @@
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
 
+const dogYears = myAge => myAge * 7;
 
+dogYears(27);
 
 
 /************************************************************** Task 3 **************************************************************/
