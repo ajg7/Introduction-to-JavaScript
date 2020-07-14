@@ -71,7 +71,10 @@ const dogFeeder = (age, weight) => {
         console.log("4% of their body weight");
     } else if (age >= 1 && weight <= 15 && weight >= 11){
         console.log("3% of their body weight");
-    } //Puppies less than 1 year
+    } else if (age >= 1 && weight > 15){
+        console.log("2% of their body weight");
+    }
+    //Puppies less than 1 year
     else if (age <= 0.4 && age > 0.2 && weight) {
         console.log("10% of their body weight")
     } else if (age <= 0.7 && age > 0.4 && weight) {
@@ -79,9 +82,7 @@ const dogFeeder = (age, weight) => {
     } else if (age < 1 && age > 0.7 && weight) {
         console.log("10% of their body weight")
     }
-    else {
-        console.log("2% of their body weight");
-    }
+    
 }
 
 dogFeeder(0.3, 15)
