@@ -74,7 +74,7 @@ dogYears(27);
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
   const game = choice => {
-      let computer = Math.round(Math.random() * 2);
+      const computer = Math.round(Math.random() * 2);
       let outcome;
       if (choice === "paper" && computer === 0 || choice === "rock" && computer === 1 || choice === "scizzors" && computer === 2) {
           outcome = "Draw";
@@ -88,12 +88,12 @@ dogYears(27);
       }
   }
   
-  console.log(game("rock"));
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
+const metricConverter = measurementInKm => measurementInKm * 0.621;
 
 
 
@@ -101,7 +101,9 @@ dogYears(27);
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
 
+const otherMetricConverter = measurementInFeet => measurementInFeet * 30.48;
 
+console.log(otherMetricConverter(4))
 
 
 /************************************************************** Task 6 **************************************************************/
@@ -122,6 +124,25 @@ dogYears(27);
 //60s should be D 
 //and anything below 60 should be F
   
+const grader = studentGrade => {
+    let letterGrade;
+    if(studentGrade >= 90) {
+        letterGrade = "A";
+        return letterGrade;
+    } else if (studentGrade >= 80 && studentGrade <= 90) {
+        letterGrade = "B";
+        return letterGrade;
+    }else if (studentGrade >= 70 && studentGrade <= 80) {
+        letterGrade = "C";
+        return letterGrade;
+    }else if (studentGrade >= 60 && studentGrade <= 70) {
+        letterGrade = "D";
+        return letterGrade;
+    }else {
+        letterGrade = "F";
+        return letterGrade;
+    }
+}
 
   
   
