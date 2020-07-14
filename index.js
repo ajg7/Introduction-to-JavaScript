@@ -66,6 +66,7 @@ dogYears(27);
 
 
 
+
 /************************************************************** Task 4 **************************************************************/
 // Rock, Paper, Sissors
 // Your function should take a string (either rock paper or sissors)
@@ -73,20 +74,38 @@ dogYears(27);
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-  const game = choice => {
-      const computer = Math.round(Math.random() * 2);
-      let outcome;
-      if (choice === "paper" && computer === 0 || choice === "rock" && computer === 1 || choice === "scizzors" && computer === 2) {
-          outcome = "Draw";
-          return outcome;
-      } else if (choice === "paper" && computer === 1 || choice === "rock" && computer === 2 || choice === "scizzors" && computer === 0) {
-          outcome = "Victory";
-          return outcome;
-      } else if (choice === "paper" && computer === 2 || choice === "rock" && computer === 0 || choice === "scizzors" && computer === 1) {
-          outcome= "Defeat";
-          return outcome;
+  const game = userChoice => {
+      let computerChoice = Math.round(Math.random() * 2);
+      computerChoice = getChoice(computerChoice);
+
+      if (userChoice === computerChoice) {
+          return 'Draw';
       }
+
+      if (userChoice === 'paper' && computerChoice === 'rock' ||
+          userChoice === 'rock' && computerChoice === 'scizzors' ||
+          userChoice === 'scizzors' && computerChoice === 'paper') {
+          return 'Victory';
+      }
+
+      return 'Defeat';
   }
+
+const getChoice = (choice) => {
+    if (choice === 0) {
+        return "paper";
+    } 
+    
+    if (choice === 1) {
+        return "rock";
+    }
+    
+    if(choice === 2) {
+        return "scizzors";
+    }
+}
+
+console.log(game("paper"))
   
 
 /************************************************************** Task 5 **************************************************************/
@@ -103,7 +122,6 @@ const metricConverter = measurementInKm => measurementInKm * 0.621;
 
 const otherMetricConverter = measurementInFeet => measurementInFeet * 30.48;
 
-console.log(otherMetricConverter(4))
 
 
 /************************************************************** Task 6 **************************************************************/
@@ -126,7 +144,6 @@ const annoyingSong = num => {
     }
 }
 
-console.log(annoyingSong(99));
 
 
 
