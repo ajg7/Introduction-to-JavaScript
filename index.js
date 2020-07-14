@@ -115,8 +115,10 @@ console.log(otherMetricConverter(4))
 const annoyingSong = num => {
     while (num >= 0) {
         let newNum = num - 1;
-        if(num !== 0){
+        if(num > 1){
             console.log(num + " bottles of soda on the wall, "+ num + " bottles of soda, take one down pass it around " + newNum + " bottles of soda on the wall")
+        } else if (num === 1) {
+            console.log(num + " bottle of soda on the wall, "+ num + " bottle of soda, take one down pass it around " + newNum + " bottles of soda on the wall")
         } else {
             console.log("ALL THE POP IS GONE!")
         }
